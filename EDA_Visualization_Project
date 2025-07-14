@@ -4,10 +4,24 @@ import matplotlib.pyplot as plt
 url= "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
 df = pd.read_csv(url)
 df.head()
+
+#this code display the shape of the dataframe....
 df.shape
+
+# this code display the name of all the column in the dataframe.....
 df.columns
-df.head()
+
+# this code displays the first 5 row.....
+df.head(5)
+
+# this method print information about dataframe including the index dtype and column dtype....
 df.info()
+
+# this function calculate various statistical majors......
 df.describe()
+
+#this create a boolean dataframe of the same shape as df where each element is true....
 df.isnull().sum()
+
+#this groups the dataframe by the unique value in the sex........
 df.groupby('Sex')['Survived'].mean()
